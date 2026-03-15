@@ -2,13 +2,14 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { 
-  Heart, Brain, Bone, Venus , Kidney, Pill, 
-  Scissors, Microscope, Ear, Smile, Activity, Syringe 
+  Heart, Brain, Bone, Venus , Mars, Pill, 
+  Scissors, Microscope, Ear, Smile, Activity, Syringe, 
+  Mars
 } from 'lucide-react';
 
 const specialties = [
   { icon: Venus, name: 'Gynecology', description: 'Child healthcare', color: 'from-pink-400 to-pink-600' },
-  { icon: Kidney, name: 'Urology', description: 'Urinarry tracts and Related', color: 'from-orange-400 to-orange-600' },
+  { icon: Mars, name: 'Urology', description: 'Urinarry tracts and Related', color: 'from-orange-400 to-orange-600' },
   { icon: Pill, name: 'Pharmacy', description: 'Medications & prescriptions', color: 'from-green-400 to-green-600' },
   { icon: Scissors, name: 'Surgery', description: 'General & specialized surgery', color: 'from-indigo-400 to-indigo-600' },
   { icon: Microscope, name: 'Pathology', description: 'Lab tests & diagnostics', color: 'from-teal-400 to-teal-600' },
