@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { 
-  Heart, Brain, Bone, Eye, Baby, Pill, 
+  Heart, Brain, Bone, Venus , Kidney, Pill, 
   Scissors, Microscope, Ear, Smile, Activity, Syringe 
 } from 'lucide-react';
 
