@@ -11,22 +11,22 @@ const footerLinks = {
   ],
   'Services': [
     { name: 'Emergency Care', href: '#' },
+    { name: '24/7 Monitoring', href: '#' },
     { name: 'Laboratory', href: '#' },
-    { name: 'Radiology', href: '#' },
     { name: 'Pharmacy', href: '#' },
-    { name: 'ICU', href: '#' },
   ],
   'Specialties': [
-    { name: 'Cardiology', href: '#' },
-    { name: 'Neurology', href: '#' },
-    { name: 'Orthopedics', href: '#' },
-    { name: 'Pediatrics', href: '#' },
+    { name: 'Urology', href: '#' },
+    { name: 'Gynecology', href: '#' },
     { name: 'Dermatology', href: '#' },
+  ],
+  'Leagals': [
+    { name: 'Developers', href: '#' },
   ],
 };
 
 const socialLinks = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
+  { icon: Facebook, href: 'https://www.facebook.com/maasuperspecialtyhospital/', label: 'Facebook' },
   { icon: Twitter, href: '#', label: 'Twitter' },
   { icon: Instagram, href: '#', label: 'Instagram' },
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
@@ -68,7 +68,7 @@ export function Footer() {
                 <Heart className="w-7 h-7 text-white" />
               </div>
               <span className="text-2xl font-bold">
-                MediCare<span className="text-teal-400">Plus</span>
+                Maa Super<span className="text-teal-400">Speciality</span>
               </span>
             </motion.a>
             
@@ -81,15 +81,15 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-gray-400">
                 <Phone className="w-5 h-5 text-teal-400" />
-                <span>+1 (800) 123-4567</span>
+                <span>+91 93344 08245</span>
               </div>
               <div className="flex items-center gap-3 text-gray-400">
                 <Mail className="w-5 h-5 text-teal-400" />
-                <span>info@medicareplus.com</span>
+                <span>maasshosp@gmail.com</span>
               </div>
               <div className="flex items-center gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-teal-400" />
-                <span>123 Healthcare Ave, Medical District</span>
+                <span>PG Road, Above SBI Bank, Horliganj, Jehanabad</span>
               </div>
             </div>
           </div>
@@ -115,35 +115,11 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Newsletter */}
-        <div className="bg-gradient-to-r from-teal-500/10 to-blue-500/10 rounded-2xl p-8 mb-12 border border-white/10">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-xl font-bold mb-2">Subscribe to Our Newsletter</h3>
-              <p className="text-gray-400">Stay updated with our latest news and health tips.</p>
-            </div>
-            <div className="flex gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-5 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-gradient-to-r from-teal-500 to-blue-600 rounded-xl font-semibold hover:shadow-lg hover:shadow-teal-500/30 transition-shadow"
-              >
-                Subscribe
-              </motion.button>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
           <p className="text-gray-400 text-sm text-center md:text-left">
-            © {new Date().getFullYear()} MediCare Plus. All rights reserved. 
+            © {new Date().getFullYear()} Er. Mahesh kumar Singh. All rights reserved. 
             <span className="inline-flex items-center ml-2">
               Made with <Heart className="w-4 h-4 text-red-500 mx-1" /> for better healthcare
             </span>

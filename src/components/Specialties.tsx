@@ -7,18 +7,12 @@ import {
 } from 'lucide-react';
 
 const specialties = [
-  { icon: Heart, name: 'Cardiology', description: 'Heart & cardiovascular care', color: 'from-red-400 to-red-600' },
-  { icon: Brain, name: 'Neurology', description: 'Brain & nervous system', color: 'from-purple-400 to-purple-600' },
-  { icon: Bone, name: 'Orthopedics', description: 'Bone & joint treatments', color: 'from-orange-400 to-orange-600' },
-  { icon: Eye, name: 'Ophthalmology', description: 'Eye care & vision', color: 'from-blue-400 to-blue-600' },
-  { icon: Baby, name: 'Pediatrics', description: 'Child healthcare', color: 'from-pink-400 to-pink-600' },
+  { icon: Venus, name: 'Gynecology', description: 'Child healthcare', color: 'from-pink-400 to-pink-600' },
+  { icon: Kidney, name: 'Urology', description: 'Urinarry tracts and Related', color: 'from-orange-400 to-orange-600' },
   { icon: Pill, name: 'Pharmacy', description: 'Medications & prescriptions', color: 'from-green-400 to-green-600' },
   { icon: Scissors, name: 'Surgery', description: 'General & specialized surgery', color: 'from-indigo-400 to-indigo-600' },
   { icon: Microscope, name: 'Pathology', description: 'Lab tests & diagnostics', color: 'from-teal-400 to-teal-600' },
-  { icon: Ear, name: 'ENT', description: 'Ear, nose & throat care', color: 'from-yellow-400 to-yellow-600' },
-  { icon: Smile, name: 'Dentistry', description: 'Dental care & treatments', color: 'from-cyan-400 to-cyan-600' },
   { icon: Activity, name: 'Emergency', description: '24/7 emergency services', color: 'from-rose-400 to-rose-600' },
-  { icon: Syringe, name: 'Dermatology', description: 'Skin care & treatments', color: 'from-amber-400 to-amber-600' },
 ];
 
 export function Specialties() {
@@ -56,7 +50,7 @@ export function Specialties() {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-medium mb-4">
-            Our Specialties
+            Our Specialisation
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             World-Class Medical

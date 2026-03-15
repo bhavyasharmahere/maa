@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Play, Shield, Clock, Award } from 'lucide-react';
 
 const stats = [
-  { icon: Shield, value: '25+', label: 'Years Experience' },
+  { icon: Shield, value: '10+', label: 'Years Experience^' },
   { icon: Clock, value: '24/7', label: 'Emergency Care' },
-  { icon: Award, value: '50+', label: 'Expert Doctors' },
+  { icon: Award, value: '03', label: 'Expert Doctors' },
 ];
 
 export function Hero() {
@@ -42,7 +42,7 @@ export function Hero() {
               transition={{ delay: 0.2 }}
               className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-teal-300 text-sm font-medium mb-6"
             >
-              🏥 Welcome to MediCare Plus Hospital
+              🏥 Welcome to Maa Super Speciality Hospital
             </motion.span>
 
             <motion.h1
@@ -51,7 +51,7 @@ export function Hero() {
               transition={{ delay: 0.3 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
             >
-              Your Health Is Our
+              Your Wellness Is Our
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-300">
                 Top Priority
               </span>
@@ -63,7 +63,7 @@ export function Hero() {
               transition={{ delay: 0.4 }}
               className="text-lg text-blue-100 mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Experience world-class healthcare with our team of expert doctors, 
+              Experience world-class healthcare service with our expert doctors, 
               cutting-edge technology, and compassionate care. Your journey to 
               wellness starts here.
             </motion.p>
@@ -74,15 +74,6 @@ export function Hero() {
               transition={{ delay: 0.5 }}
               className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group flex items-center gap-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-8 py-4 rounded-full font-semibold shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 transition-all"
-              >
-                Book Appointment
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -152,7 +143,7 @@ export function Hero() {
                       </svg>
                     </motion.div>
                     <h3 className="text-xl font-bold text-white mb-2">Caring Hearts</h3>
-                    <p className="text-blue-200 text-sm">Healing Hands</p>
+                    <p className="text-blue-200 text-sm">“Sarve Santu Niraamayaah”</p>
                   </div>
                 </motion.div>
               </div>
@@ -184,7 +175,7 @@ export function Hero() {
                     <Award className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-800">Top Rated</div>
+                    <div className="font-semibold text-gray-800">Top Trusted</div>
                     <div className="text-sm text-gray-500">5 Star Reviews</div>
                   </div>
                 </div>

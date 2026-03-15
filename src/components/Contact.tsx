@@ -10,27 +10,27 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Location',
-    details: ['123 Healthcare Avenue', 'Medical District, City 12345'],
+    details: ['Above SBI Bank's Main Branch', 'Patna-Gaya Road, Horliganj, Jehanabad, Bihar'],
   },
   {
     icon: Phone,
     title: 'Phone',
-    details: ['+1 (800) 123-4567', '+1 (800) 765-4321'],
+    details: ['+91 093344 08245', '+1 (800) 765-4321'],
   },
   {
     icon: Mail,
     title: 'Email',
-    details: ['info@medicareplus.com', 'support@medicareplus.com'],
+    details: ['maasshosp@gmail.com', 'support@medicareplus.com'],
   },
   {
     icon: Clock,
     title: 'Working Hours',
-    details: ['Mon-Sat: 8:00 AM - 8:00 PM', 'Emergency: 24/7'],
+    details: ['Mon-Sat: 12:00 Noon - 08:00 PM', 'Monitoring: 24*7' , 'Emergency: 24/7'],
   },
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: '#', color: 'hover:bg-blue-600' },
+  { icon: Facebook, href: 'https://www.facebook.com/maasuperspecialtyhospital/', color: 'hover:bg-blue-600' },
   { icon: Twitter, href: '#', color: 'hover:bg-sky-500' },
   { icon: Instagram, href: '#', color: 'hover:bg-pink-600' },
   { icon: Linkedin, href: '#', color: 'hover:bg-blue-700' },
@@ -75,8 +75,8 @@ export function Contact() {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Have questions or need to schedule an appointment? Reach out to us 
-            and our team will be happy to assist you.
+            Have questions or need to get an appointment? Contact to us 
+            and we will be happy to assist you.
           </p>
         </motion.div>
 
@@ -191,7 +191,7 @@ export function Contact() {
                     value={formState.name}
                     onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
-                    placeholder="John Doe"
+                    placeholder="Alankrita"
                     required
                   />
                 </div>
@@ -202,7 +202,7 @@ export function Contact() {
                     value={formState.email}
                     onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
-                    placeholder="john@example.com"
+                    placeholder="maasshosp@gmail.com"
                     required
                   />
                 </div>
@@ -261,7 +261,7 @@ export function Contact() {
                 {submitted ? (
                   <>
                     <Check className="w-5 h-5" />
-                    Message Sent!
+                    !!Error 404 Occured, Message Can't be Send!!
                   </>
                 ) : (
                   <>

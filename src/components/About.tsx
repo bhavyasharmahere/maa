@@ -56,7 +56,7 @@ export function About() {
                     className="text-white text-center p-4"
                   >
                     <Building2 className="w-12 h-12 mx-auto mb-2" />
-                    <p className="font-semibold">Modern Facility</p>
+                    <p className="font-semibold">High Tech Facilities</p>
                   </motion.div>
                 </div>
               </motion.div>
@@ -72,7 +72,7 @@ export function About() {
                     className="text-white text-center p-4"
                   >
                     <Users className="w-12 h-12 mx-auto mb-2" />
-                    <p className="font-semibold">Team of Experts</p>
+                    <p className="font-semibold">Expert Doctors</p>
                   </motion.div>
                 </div>
                 <div className="h-48 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-2xl shadow-xl flex items-center justify-center">
@@ -95,8 +95,8 @@ export function About() {
               className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold">25+</div>
-                <div className="text-xs">Years of Excellence</div>
+                <div className="text-3xl font-bold">10+</div>
+                <div className="text-xs">Years of Excellence^</div>
               </div>
             </motion.div>
           </motion.div>
@@ -134,8 +134,8 @@ export function About() {
               transition={{ delay: 0.5 }}
               className="text-lg text-gray-600 mb-8"
             >
-              MediCare Plus is a leading multi-specialty hospital dedicated to providing 
-              exceptional healthcare services. With over 25 years of experience, we have 
+              Maa Super Speciality Hospital is a multi-specialty hospital dedicated to providing 
+              exceptional healthcare services with the best and experienced doctors. With over 3 years of experience, we have 
               been at the forefront of medical innovation, combining advanced technology 
               with compassionate care.
             </motion.p>

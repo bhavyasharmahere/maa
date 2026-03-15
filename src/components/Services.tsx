@@ -10,50 +10,50 @@ const services = [
   {
     icon: Ambulance,
     title: 'Emergency Care',
-    description: 'Round-the-clock emergency services with state-of-the-art ambulance fleet and trauma care.',
-    features: ['24/7 Availability', 'Advanced Life Support', 'Quick Response'],
+    description: 'Round-the-clock emergency care with surgical facilities.',
+    features: ['24/7 Availability', 'Advanced Equipments', 'Quick Response'],
   },
   {
     icon: FlaskConical,
     title: 'Laboratory Services',
     description: 'Comprehensive diagnostic tests with accurate results using advanced laboratory equipment.',
-    features: ['Quick Results', 'Home Collection', '500+ Tests'],
+    features: ['Fast Results', 'Safe Collection', '10+ Tests'],
   },
   {
     icon: Scan,
     title: 'Imaging & Radiology',
-    description: 'Advanced imaging services including MRI, CT Scan, X-Ray, and Ultrasound diagnostics.',
-    features: ['MRI & CT Scan', '3D Imaging', 'Digital Reports'],
+    description: 'Advanced imaging services using advanced sound wave technologies.',
+    features: ['Ultrasound', 'Medical Imaging', 'Digital Reports'],
   },
   {
     icon: HeartPulse,
-    title: 'ICU & Critical Care',
-    description: 'Intensive care units equipped with latest monitoring systems and life support equipment.',
-    features: ['24/7 Monitoring', 'Ventilator Support', 'Expert Team'],
+    title: 'Care',
+    description: 'Intensive care units equipped with latest essential monitoring systems.',
+    features: ['24/7 Monitoring', 'Medical Support', 'Quality Medicines'],
   },
   {
     icon: Bed,
     title: 'Inpatient Care',
     description: 'Comfortable private and semi-private rooms with modern amenities for optimal recovery.',
-    features: ['Private Rooms', 'Nursing Care', 'Dietary Services'],
+    features: ['AC Rooms', 'Nursing Care', 'Clean Washrooms'],
   },
   {
     icon: Pill,
     title: '24/7 Pharmacy',
     description: 'In-house pharmacy stocked with all essential medicines and medical supplies.',
-    features: ['All Medicines', 'Home Delivery', 'Genuine Products'],
+    features: ['Quality Medicines', 'Accountability', 'Genuine Products'],
   },
   {
     icon: Phone,
-    title: 'Telemedicine',
-    description: 'Virtual consultations with our doctors from the comfort of your home via video call.',
-    features: ['Video Consultation', 'E-Prescription', 'Follow-ups'],
+    title: 'Tele-Support',
+    description: 'Virtual consultations for your convinience.',
+    features: ['Consultation', 'Follow-ups'],
   },
   {
     icon: CalendarCheck,
     title: 'Health Checkups',
     description: 'Comprehensive health screening packages designed for preventive healthcare.',
-    features: ['Full Body Checkup', 'Executive Health', 'Senior Care'],
+    features: ['Essential Checkups', 'Executive Health', 'Senior Care'],
   },
 ];
 
@@ -83,7 +83,7 @@ export function Services() {
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We offer a wide range of healthcare services designed to meet all your 
-            medical needs under one roof with excellence and compassion.
+            medical needs under one roof with excellence and compassion of our field.
           </p>
         </motion.div>
 
@@ -173,15 +173,7 @@ export function Services() {
                 className="flex items-center gap-2 bg-white text-teal-600 px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow"
               >
                 <Phone className="w-5 h-5" />
-                Call: 1800-123-4567
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold border border-white/30 hover:bg-white/30 transition-colors"
-              >
-                <Ambulance className="w-5 h-5" />
-                Request Ambulance
+                Call: 0611-435-6769
               </motion.button>
             </div>
           </div>
