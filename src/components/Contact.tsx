@@ -10,7 +10,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Location',
-    details: ['Above SBI Bank's Main Branch', 'Patna-Gaya Road, Horliganj, Jehanabad, Bihar'],
+    details: ['2nd Floor, Above SBI Bank Main Branch', 'Patna-Gaya Road, Horliganj, Jehanabad, Bihar'],
   },
   {
     icon: Phone,
@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: 'Working Hours',
-    details: ['Mon-Sat: 12:00 Noon - 08:00 PM', 'Monitoring: 24*7' , 'Emergency: 24/7'],
+    details: ['Mon-Sat: 08:00AM to 10:00AM - 1:00 PM to 3:00PM - 05:00PM to 07:00PM', 'Monitoring: 24*7' , 'Emergency: 24/7'],
   },
 ];
 
