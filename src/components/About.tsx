@@ -96,7 +96,11 @@ export function About() {
             >
               <div className="text-center">
                 <div className="text-3xl font-bold">100+</div>
-                <div className="text-xs">Service Weeks</div>
+                <div className="text-xs">
+                  Service
+                  <br />
+                  Weeks
+                  </div>
               </div>
             </motion.div>
           </motion.div>
