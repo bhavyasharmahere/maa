@@ -10,28 +10,28 @@ import { Footer } from './components/Footer';
 
 export function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen scroll-mt-24 bg-white">
       <Navbar />
       <main>
-        <section id="home" className="min-h-screen">
+        <section id="home" className="min-h-screen scroll-mt-24">
           <Hero />
         </section>
-        <section id="about" className="min-h-screen">
+        <section id="about" className="min-h-screen scroll-mt-24">
           <About />
         </section>
-        <section id="specialties" className="min-h-screen">
+        <section id="specialties" className="min-h-screen scroll-mt-24 scroll-mt-24">
           <Specialties />
         </section>
-        <section id="doctors" className="min-h-screen">
+        <section id="doctors" className="min-h-screen scroll-mt-24">
           <Doctors />
         </section>
-        <section id="services" className="min-h-screen">
+        <section id="services" className="min-h-screen scroll-mt-24">
           <Services />
         </section>
-        <section id="testimonials" className="min-h-screen">
+        <section id="testimonials" className="min-h-screen scroll-mt-24">
           <Testimonials />
         </section>
-        <section id="contact" className="min-h-screen">
+        <section id="contact" className="min-h-screen scroll-mt-24">
           <Contact />
         </section>
       </main>
