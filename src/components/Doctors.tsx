@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Star, Award, Clock, Phone } from 'lucide-react';
-import hospImg from '/Untitled.png';
+import hospImg from '../src/img/Untitled.png';
 const doctors = [
   {
     name: 'Dr. Sarah Johnson',
