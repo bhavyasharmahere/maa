@@ -18,7 +18,6 @@ const footerLinks = {
   'Specialties': [
     { name: 'Urology', href: '#' },
     { name: 'Gynecology', href: '#' },
-    { name: 'Dermatology', href: '#' },
   ],
   'Leagals': [
     { name: 'Developers', href: '#' },

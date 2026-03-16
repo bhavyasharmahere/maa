@@ -57,9 +57,12 @@ export function Navbar() {
                 href={link.href}
                 onClick={(e) => {
                   e.preventDefault();
+                  setIsOpen(false); // closes the fucking menu 
                   const section = document.querySelector(link.href);
-                  section?.scrollIntoView({ behavior: "smooth" }); 
-              }}
+                  setTimeout(() => {
+                    section?.scrollIntoView({ behavior: "smooth" });
+                    }, 200);
+                  }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
