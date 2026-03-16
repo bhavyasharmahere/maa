@@ -55,6 +55,11 @@ export function Navbar() {
               <motion.a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const section = document.querySelector(link.href);
+                  section?.scrollIntoView({ behavior: "smooth" }); 
+              }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
