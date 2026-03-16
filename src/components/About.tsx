@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { CheckCircle, Users, Building2, Stethoscope } from 'lucide-react';
+import { CheckCircle, Users, BriefcaseMedical, Building2, Stethoscope } from 'lucide-react';
 
 const features = [
   'State-of-the-art medical equipment',
@@ -13,9 +13,9 @@ const features = [
 ];
 
 const highlights = [
-  { icon: Users, value: '50,000+', label: 'Happy Patients' },
-  { icon: Building2, value: '200+', label: 'Hospital Beds' },
-  { icon: Stethoscope, value: '30+', label: 'Specialties' },
+  { icon: Users, value: '5,000+', label: 'Happy Patients' },
+  { icon: Building2, value: '008+', label: 'Hospital Beds' },
+  { icon: Stethoscope, value: '02', label: 'Specialties' },
 ];
 
 export function About() {
@@ -46,7 +46,7 @@ export function About() {
                     whileHover={{ scale: 1.1 }}
                     className="text-white text-center p-4"
                   >
-                    <Stethoscope className="w-12 h-12 mx-auto mb-2" />
+                    <BriefcaseMedical className="w-12 h-12 mx-auto mb-2" />
                     <p className="font-semibold">Expert Care</p>
                   </motion.div>
                 </div>
@@ -71,7 +71,7 @@ export function About() {
                     whileHover={{ scale: 1.1 }}
                     className="text-white text-center p-4"
                   >
-                    <Users className="w-12 h-12 mx-auto mb-2" />
+                    <Stethoscope className="w-12 h-12 mx-auto mb-2" />
                     <p className="font-semibold">Expert Doctors</p>
                   </motion.div>
                 </div>
@@ -92,11 +92,11 @@ export function About() {
               initial={{ opacity: 0, scale: 0 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.6, type: 'spring' }}
-              className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl"
+              className="absolute -bottom-4 -right-4 w-22 h-22 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold">10+</div>
-                <div className="text-xs">Years of Excellence^</div>
+                <div className="text-3xl font-bold">100+</div>
+                <div className="text-xs">Service Weeks</div>
               </div>
             </motion.div>
           </motion.div>
