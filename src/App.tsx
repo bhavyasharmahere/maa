@@ -10,7 +10,7 @@ import { Footer } from './components/Footer';
 
 export function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <><div className="min-h-screen bg-white">
       <Navbar />
       <main>
         <section id="home">
@@ -32,11 +32,10 @@ export function App() {
           <Testimonials />
         </section>
       </main>
-        <section id="contact">
-          <Contact />
-        </section>
-      </main>
-      <Footer />
+      <section id="contact">
+        <Contact />
+      </section>
+    </main><Footer /></>
     </div>
   );
 }
