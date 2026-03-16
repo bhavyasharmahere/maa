@@ -13,13 +13,28 @@ export function App() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <main>
-        <Hero />
-        <About />
-        <Specialties />
-        <Doctors />
-        <Services />
-        <Testimonials />
-        <Contact />
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="specialties">
+          <Specialties />
+        </section>
+        <section id="doctors">
+          <Doctors />
+        </section>
+        <section id="services">
+          <Services />
+        </section>
+        <section id="testimonials">
+          <Testimonials />
+        </section>
+      </main>
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
       <Footer />
     </div>

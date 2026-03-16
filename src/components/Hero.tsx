@@ -4,7 +4,7 @@ import { ArrowRight, Play, Shield, Clock, Award } from 'lucide-react';
 const stats = [
   { icon: Shield, value: '10+', label: 'Years Experience^' },
   { icon: Clock, value: '24/7', label: 'Emergency Care' },
-  { icon: Award, value: '03', label: 'Expert Doctors' },
+  { icon: Award, value: '02', label: 'Expert Doctors' },
 ];
 
 export function Hero() {
@@ -176,7 +176,7 @@ export function Hero() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-800">Top Trusted</div>
-                    <div className="text-sm text-gray-500">5 Star Reviews</div>
+                    <div className="text-sm text-gray-500">5Best Reviews</div>
                   </div>
                 </div>
               </motion.div>

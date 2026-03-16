@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X, Hospital } from 'lucide-react';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -9,6 +9,7 @@ const navLinks = [
   { name: 'Doctors', href: '#doctors' },
   { name: 'Services', href: '#services' },
   { name: 'Contact', href: '#contact' },
+  { name: 'Leagals', href: '#contact' },
 ];
 
 export function Navbar() {
@@ -41,10 +42,10 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
           >
             <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-blue-600 rounded-xl flex items-center justify-center">
-              <Heart className="w-6 h-6 text-white" />
+              <Hospital className="w-6 h-6 text-white" />
             </div>
             <span className={`text-xl font-bold ${scrolled ? 'text-gray-800' : 'text-white'}`}>
-              Maa Super<span className="text-teal-500">Speciality</span>
+              Maa Super<span className="text-teal-500"> Speciality</span>
             </span>
           </motion.a>
 
