@@ -47,7 +47,7 @@ const services = [
     icon: Phone,
     title: 'Tele-Support',
     description: 'Virtual consultations for your convinience.',
-    features: ['Consultation', 'Follow-ups'],
+    features: ['Consultation', 'Follow-ups', 'Emergency'],
   },
   {
     icon: CalendarCheck,
@@ -167,14 +167,15 @@ export function Services() {
               in case of any medical emergency.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
+              <motion.a
+                href="tel:+916114356769"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white text-teal-600 px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow"
               >
                 <Phone className="w-5 h-5" />
                 Call: 0611-435-6769
-              </motion.button>
+              </motion.a>
             </div>
           </div>
         </motion.div>
