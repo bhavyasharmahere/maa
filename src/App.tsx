@@ -7,8 +7,7 @@ import { Services } from './components/Services';
 import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { Phone } from "lucide-react";
-import { motion } from "framer-motion";
+import EmergencyTab from "./components/EmergencyTab";
 
 export function App() {
   return (
@@ -38,15 +37,7 @@ export function App() {
         </section>
       </main>
       <Footer />
-       <motion.a
-        href="tel:+916114356769"
-       whileHover={{ scale: 1.08 }}
-       whileTap={{ scale: 0.95 }}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-red-700 animate-pulse md:hidden"
-        >
-        <Phone className="w-5 h-5" />
-        Emergency Call
-        </motion.a>
+      <EmergencyTab />
     </div>
   );
 }
