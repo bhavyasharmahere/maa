@@ -55,15 +55,15 @@ export function Navbar() {
               <motion.a
                 key={link.name}
                 href={link.href}
-                onClick={(e) => {
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                     e.preventDefault();
-                    const id = link.href.replace("#", "");
-                    const section = document.getElementById(id);
-                    setIsOpen(false);
-                    setTimeout(() => {
-                      section?.scrollIntoView({ behavior: "smooth" });
-                    }, 300);
-                  }}
+                      const id = link.href.replace("#", "");
+                      const section = document.getElementById(id);
+                      setIsOpen(false);
+                      setTimeout(() => {
+                        section?.scrollIntoView({ behavior: "smooth" });
+                      }, 300);
+                    }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -101,7 +101,15 @@ export function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                    e.preventDefault();
+                    const id = link.href.replace("#", "");
+                    const section = document.getElementById(id);
+                    setIsOpen(false);
+                    setTimeout(() => {
+                      section?.scrollIntoView({ behavior: "smooth" });
+                    }, 300);
+                  }}
                   className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg transition-colors"
                 >
                   {link.name}
