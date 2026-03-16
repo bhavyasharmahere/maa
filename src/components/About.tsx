@@ -13,7 +13,7 @@ const features = [
 ];
 
 const highlights = [
-  { icon: Users, value: '5,000+', label: 'Happy Patients' },
+  { icon: Users, value: '1,000+', label: 'Happy Patients' },
   { icon: Building2, value: '008+', label: 'Hospital Beds' },
   { icon: Stethoscope, value: '02', label: 'Specialties' },
 ];

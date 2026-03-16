@@ -2,61 +2,33 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Star, Award, Clock, Phone } from 'lucide-react';
-
+import hospImg from '/untitled.png';
 const doctors = [
   {
     name: 'Dr. Sarah Johnson',
     specialty: 'Cardiologist',
     experience: '15+ Years',
     rating: 4.9,
-    image: 'SJ',
+    image: hospImg,
     color: 'from-rose-400 to-red-500',
     available: true,
+    description: [
+      'Specializes in interventional cardiology and heart disease prevention',
+      'Published researcher with 50+ peer-reviewed medical journals'
+    ],
   },
   {
     name: 'Dr. Michael Chen',
     specialty: 'Neurologist',
     experience: '20+ Years',
     rating: 4.8,
-    image: 'MC',
+    image: hospImg,
     color: 'from-purple-400 to-indigo-500',
     available: true,
-  },
-  {
-    name: 'Dr. Emily Williams',
-    specialty: 'Pediatrician',
-    experience: '12+ Years',
-    rating: 4.9,
-    image: 'EW',
-    color: 'from-pink-400 to-rose-500',
-    available: false,
-  },
-  {
-    name: 'Dr. James Anderson',
-    specialty: 'Orthopedic Surgeon',
-    experience: '18+ Years',
-    rating: 4.7,
-    image: 'JA',
-    color: 'from-amber-400 to-orange-500',
-    available: true,
-  },
-  {
-    name: 'Dr. Lisa Thompson',
-    specialty: 'Dermatologist',
-    experience: '10+ Years',
-    rating: 4.8,
-    image: 'LT',
-    color: 'from-teal-400 to-cyan-500',
-    available: true,
-  },
-  {
-    name: 'Dr. Robert Garcia',
-    specialty: 'General Surgeon',
-    experience: '22+ Years',
-    rating: 4.9,
-    image: 'RG',
-    color: 'from-blue-400 to-indigo-500',
-    available: true,
+    description: [
+      'Expert in treating complex neurological disorders and stroke care',
+      'Board certified with advanced training in neurosurgery techniques'
+    ],
   },
 ];
 
@@ -101,8 +73,8 @@ export function Doctors() {
               whileHover={{ y: -10 }}
               className="group bg-white rounded-3xl overflow-hidden shadow-lg shadow-gray-100 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-300"
             >
-              {/* Image Area */}
-              <div className={`relative h-64 bg-gradient-to-br ${doctor.color} p-6`}>
+              {/* Header Area with Avatar and Badge */}
+              <div className="relative p-6 pb-0">
                 {/* Availability Badge */}
                 <motion.div
                   initial={{ scale: 0 }}
@@ -118,34 +90,40 @@ export function Doctors() {
                 </motion.div>
 
                 {/* Doctor Avatar */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+                <div className="mb-4">
                   <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-xl border-4 border-white"
+                    whileHover={{ scale: 1.05 }}
+                    className="w-24 h-24 bg-gradient-to-br from-teal-100 to-blue-100 rounded-full overflow-hidden flex items-center justify-center shadow-lg border-4 border-white"
                   >
-                    <span className={`text-4xl font-bold bg-gradient-to-br ${doctor.color} bg-clip-text text-transparent`}>
-                      {doctor.image}
-                    </span>
+                    {doctor.image.startsWith('http') ? (
+                      <img 
+                        src={doctor.image} 
+                        alt={doctor.name} 
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <span className={`text-3xl font-bold bg-gradient-to-br ${doctor.color} bg-clip-text text-transparent`}>
+                        {doctor.image}
+                      </span>
+                    )}
                   </motion.div>
                 </div>
-
-                {/* Decorative Elements */}
-                <motion.div
-                  className="absolute top-8 left-8 w-16 h-16 bg-white/20 rounded-full"
-                  animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                />
-                <motion.div
-                  className="absolute bottom-16 right-8 w-8 h-8 bg-white/20 rounded-full"
-                  animate={{ scale: [1.2, 1, 1.2], opacity: [0.5, 0.3, 0.5] }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                />
               </div>
 
               {/* Info Area */}
-              <div className="pt-20 pb-6 px-6 text-center">
+              <div className="pt-2 pb-6 px-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{doctor.name}</h3>
-                <p className="text-teal-600 font-medium mb-4">{doctor.specialty}</p>
+                <p className="text-teal-600 font-medium mb-3">{doctor.specialty}</p>
+                
+                {/* Description Bullet Points */}
+                <ul className="text-left space-y-2 mb-4">
+                  {doctor.description.map((desc, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                      <span className="text-teal-500 mt-0.5">•</span>
+                      <span>{desc}</span>
+                    </li>
+                  ))}
+                </ul>
 
                 {/* Stats */}
                 <div className="flex justify-center gap-6 mb-6">
