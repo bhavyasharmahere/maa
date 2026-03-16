@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Phone, AlertTriangle } from "lucide-react";
+import { Phone, AlertTriangle, Siren, LucideSiren } from "lucide-react";
 export default function EmergencyTab() {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
@@ -31,11 +31,13 @@ export default function EmergencyTab() {
         className="flex items-center bg-red-600 text-white rounded-r-full shadow-lg overflow-hidden"
         style={{ height: 56 }}
       >
-        <button
-          onClick={() => setOpen(!open)}
-          className="flex items-center justify-center w-14 h-full"
-        >
-          <AlertTriangle className="w-6 h-6" />
+         <button
+         onClick={() => setOpen(!open)}
+         className="relative flex items-center justify-center w-14 h-full"
+         >
+            <span className="absolute w-10 h-10 bg-red-500 rounded-full opacity-70 animate-ping"></span>
+            <span className="absolute w-10 h-10 bg-red-400 rounded-full opacity-40"></span>
+            <Siren className="w-6 h-6 relative z-10" />
         </button>
 
         {open && (
