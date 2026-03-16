@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Star, Award, Clock, Phone } from 'lucide-react';
-import hospImg from '../img/Untitled.png';
+import hospImg from '../img/logo.png';
 
 const doctors = [
   {
@@ -96,17 +96,11 @@ export function Doctors() {
                     whileHover={{ scale: 1.05 }}
                     className="w-24 h-24 bg-gradient-to-br from-teal-100 to-blue-100 rounded-full overflow-hidden flex items-center justify-center shadow-lg border-4 border-white"
                   >
-                    {doctor.image.startsWith('http') ? (
-                      <img 
-                        src={doctor.image} 
-                        alt={doctor.name} 
-                        className="w-full h-full object-cover"
+                    <img
+                      src={doctor.image}
+                       alt={doctor.name}
+                      className="w-full h-full object-cover"
                       />
-                    ) : (
-                      <span className={`text-3xl font-bold bg-gradient-to-br ${doctor.color} bg-clip-text text-transparent`}>
-                        {doctor.image}
-                      </span>
-                    )}
                   </motion.div>
                 </div>
               </div>
