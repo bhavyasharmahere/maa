@@ -21,7 +21,7 @@ const doctors = [
   },
   {
     name: 'Dr. Manisha Kumari',
-    specialty: 'Neurologist',
+    specialty: 'Gynecologist',
     experience: '10+ Years',
     rating: 4.8,
     image: hospImg,
@@ -55,7 +55,7 @@ export function Doctors() {
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Meet Our Expert
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">
-              Medical Team
+              DOCTORS
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -65,7 +65,7 @@ export function Doctors() {
         </motion.div>
 
         {/* Doctors Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
           {doctors.map((doctor, index) => (
             <motion.div
               key={doctor.name}
