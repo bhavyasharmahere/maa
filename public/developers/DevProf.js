@@ -39,7 +39,7 @@ function render() {
           <h1 class="dev-profile-name">Bhavya Sharma</h1>
           <h2 class="dev-profile-title">Tech Enthusiast and Developer</h2>
           <p class="dev-profile-desc">
-            I build polished web experiences. I uses various languages like HTML, CSS, JS, TS, TSX, Python and more. I prefer delivering in my best despite of anythink. Being GODFIDENT. 
+            I build polished web experiences. I uses various languages like HTML, CSS, JS, TS, TSX, Python and more. I prefer delivering in my best despite of anything. Being GODFIDENT. 
           </p>
 
           <div class="dev-profile-links">
