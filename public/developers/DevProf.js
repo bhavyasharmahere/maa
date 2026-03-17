@@ -29,17 +29,17 @@ function render() {
         <div class="dev-profile-image-container">
           <div class="dev-profile-image-ring">
             <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80"
+              src="./digiface.jpg"
               class="dev-profile-avatar"
             />
           </div>
         </div>
 
         <div class="dev-profile-content">
-          <h1 class="dev-profile-name">Alex Developer</h1>
-          <h2 class="dev-profile-title">Frontend Engineer & UI Designer</h2>
+          <h1 class="dev-profile-name">Bhavya Sharma</h1>
+          <h2 class="dev-profile-title">Tech Enthusiast and Developer</h2>
           <p class="dev-profile-desc">
-            I build polished, pixel-perfect, and highly animated web experiences.
+            I build polished web experiences. I uses various languages like HTML, CSS, JS, TS, TSX, Python and more. I prefer delivering in my best despite of anythink. Being GODFIDENT. 
           </p>
 
           <div class="dev-profile-links">
