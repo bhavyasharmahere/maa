@@ -15,7 +15,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    details: ['+91 93344 08245', '+91 611-435-6885'],
+    details: ['+91 93344 08245', '+91 611 4356 769'],
   },
   {
     icon: Mail,
@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: 'Working Hours',
-    details: ['(08:00AM to 10:00AM) - (1:00 PM to 3:00PM) - (05:00PM to 07:00PM)', 'Emergency & Monitoring: 24/7'],
+    details: ['(08:00AM to 10:00AM)',  '(1:00 PM to 3:00PM)', '(05:00PM to 07:00PM)', 'Emergency & Monitoring: 24/7'],
   },
 ];
 
