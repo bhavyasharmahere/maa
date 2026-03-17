@@ -10,10 +10,10 @@ const footerLinks = {
     { name: 'Contact', href: '#contact' },
   ],
   'Services': [
-    { name: 'Emergency Care', href: '#' },
-    { name: '24/7 Monitoring', href: '#' },
-    { name: 'Laboratory', href: '#' },
-    { name: 'Pharmacy', href: '#' },
+    { name: 'Emergency Care', href: '#services' },
+    { name: '24/7 Monitoring', },
+    { name: 'Laboratory', href: '#specialities' },
+    { name: 'Pharmacy', href: '#specialities' },
   ],
   'Specialties': [
     { name: 'Urology', href: '#' },

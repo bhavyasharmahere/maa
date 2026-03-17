@@ -15,17 +15,17 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    details: ['+91 093344 08245', '+1 (800) 765-4321'],
+    details: ['+91 93344 08245', '+91 611-435-6885'],
   },
   {
     icon: Mail,
     title: 'Email',
-    details: ['maasshosp@gmail.com', 'support@medicareplus.com'],
+    details: ['maasshosp@gmail.com', '//ONLY ONE MAIL ID//'],
   },
   {
     icon: Clock,
     title: 'Working Hours',
-    details: ['Mon-Sat: 08:00AM to 10:00AM - 1:00 PM to 3:00PM - 05:00PM to 07:00PM', 'Monitoring: 24*7' , 'Emergency: 24/7'],
+    details: ['(08:00AM to 10:00AM) - (1:00 PM to 3:00PM) - (05:00PM to 07:00PM)', 'Emergency & Monitoring: 24/7'],
   },
 ];
 
@@ -243,7 +243,7 @@ export function Contact() {
                   onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                   rows={4}
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all resize-none"
-                  placeholder="How can we help you?"
+                  placeholder="!! FEATURE NOT WORKING!!"
                   required
                 />
               </div>
@@ -261,7 +261,7 @@ export function Contact() {
                 {submitted ? (
                   <>
                     <Check className="w-5 h-5" />
-                    !!Error 404 Occured, Message Can't be Send!!
+                    !!Error 404 Occured, Message Not Sent!!
                   </>
                 ) : (
                   <>

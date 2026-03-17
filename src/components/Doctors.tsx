@@ -65,7 +65,7 @@ export function Doctors() {
         </motion.div>
 
         {/* Doctors Grid */}
-       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 max-w-5xl mx-auto">
           {doctors.map((doctor, index) => (
             <motion.div
               key={doctor.name}
