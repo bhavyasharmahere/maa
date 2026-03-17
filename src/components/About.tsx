@@ -81,7 +81,7 @@ export function About() {
                     className="text-white text-center p-4"
                   >
                     <CheckCircle className="w-12 h-12 mx-auto mb-2" />
-                    <p className="font-semibold">Quality Assured</p>
+                    <p className="font-semibold">Trusted Quality</p>
                   </motion.div>
                 </div>
               </motion.div>

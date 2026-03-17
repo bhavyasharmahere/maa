@@ -1,34 +1,35 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Star, Award, Clock, Phone } from 'lucide-react';
+import { Star, Award, Clock, Phone, CircleAlert } from 'lucide-react';
 import hospImg from '../img/logo.png';
+import rjImg from '../img/rj.jpg'
 
 const doctors = [
   {
-    name: 'Dr. Sarah Johnson',
-    specialty: 'Cardiologist',
+    name: 'Dr. Rajesh Kumar',
+    specialty: 'Urologist',
     experience: '15+ Years',
-    rating: 4.9,
-    image: hospImg,
+    rating: 10,
+    image: rjImg,
     color: 'from-rose-400 to-red-500',
     available: true,
     description: [
-      'Specializes in interventional cardiology and heart disease prevention',
-      'Published researcher with 50+ peer-reviewed medical journals'
+      'Expert in urology and male reproductive health.',
+      'Specialist for Kidney, bladder & prostate related issues. '
     ],
   },
   {
-    name: 'Dr. Michael Chen',
+    name: 'Dr. Manisha Kumari',
     specialty: 'Neurologist',
-    experience: '20+ Years',
+    experience: '10+ Years',
     rating: 4.8,
     image: hospImg,
     color: 'from-purple-400 to-indigo-500',
     available: true,
     description: [
-      'Expert in treating complex neurological disorders and stroke care',
-      'Board certified with advanced training in neurosurgery techniques'
+      'Gynecologist & laparoscopic surgery specialist.',
+      'Women’s health, pregnancy & infertility care.'
     ],
   },
 ];
@@ -132,7 +133,7 @@ export function Doctors() {
                   </div>
                   <div className="flex items-center gap-1 text-gray-600">
                     <Award className="w-4 h-4 text-blue-500" />
-                    <span className="text-sm">Certified</span>
+                    <span className="text-sm">Super Specialist</span>
                   </div>
                 </div>
 
@@ -143,14 +144,14 @@ export function Doctors() {
                     whileTap={{ scale: 0.95 }}
                     className="flex-1 bg-gradient-to-r from-teal-500 to-blue-500 text-white py-3 rounded-xl font-medium text-sm hover:shadow-lg hover:shadow-teal-200 transition-shadow"
                   >
-                    Book Appointment
+                    Know More
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center text-gray-600 hover:bg-teal-50 hover:text-teal-600 transition-colors"
                   >
-                    <Phone className="w-5 h-5" />
+                    <CircleAlert className="w-5 h-5" />
                   </motion.button>
                 </div>
               </div>
@@ -170,7 +171,7 @@ export function Doctors() {
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-teal-500 text-teal-600 rounded-full font-semibold hover:bg-teal-500 hover:text-white transition-colors"
           >
-            View All Doctors
+            View Legal Documents
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
