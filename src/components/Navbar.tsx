@@ -9,7 +9,8 @@ const navLinks = [
   { name: 'Doctors', href: '#doctors' },
   { name: 'Services', href: '#services' },
   { name: 'Contact', href: '#contact' },
-  { name: 'Leagals', href: '#contact' },
+  { name: 'Leagals', href: '#footer' },
+  { name: 'Reviews', href: '#testimonials' },
 ];
 
 export function Navbar() {

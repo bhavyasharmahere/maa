@@ -36,7 +36,9 @@ export function App() {
           <Contact />
         </section>
       </main>
-      <Footer />
+      <section id="footer" className="min-h-screen scroll-mt-24">
+        <Footer />
+      </section>
       <EmergencyTab />
     </div>
   );

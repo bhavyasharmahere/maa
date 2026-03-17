@@ -5,35 +5,35 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Jennifer Martinez',
+    name: 'Patient 0',
     role: 'Patient',
     rating: 5,
     text: 'The care I received at MediCare Plus was exceptional. From the moment I walked in, the staff made me feel comfortable and well-cared for. Dr. Johnson explained everything clearly and the treatment was effective.',
-    initials: 'JM',
+    initials: 'XX',
     color: 'from-pink-400 to-rose-500',
   },
   {
-    name: 'David Wilson',
+    name: 'Patient 1',
     role: 'Patient',
     rating: 5,
     text: 'I had a complex surgery and the entire team at MediCare Plus handled it with utmost professionalism. The facilities are top-notch and the post-operative care was excellent. Highly recommend!',
-    initials: 'DW',
+    initials: 'XX',
     color: 'from-blue-400 to-indigo-500',
   },
   {
-    name: 'Sarah Thompson',
+    name: 'Patient 2',
     role: 'Patient',
     rating: 5,
     text: 'The pediatric department took amazing care of my daughter. The doctors and nurses were so gentle and patient with her. It made a stressful situation so much easier for our family.',
-    initials: 'ST',
+    initials: 'XX',
     color: 'from-teal-400 to-cyan-500',
   },
   {
-    name: 'Michael Brown',
+    name: 'Patient 3',
     role: 'Patient',
     rating: 5,
     text: 'Emergency services at MediCare Plus are outstanding. When I had a medical emergency, they responded quickly and efficiently. The team saved my life and I am forever grateful.',
-    initials: 'MB',
+    initials: 'XX',
     color: 'from-amber-400 to-orange-500',
   },
 ];
@@ -72,7 +72,7 @@ export function Testimonials() {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Read what our patients have to say about their experience at MediCare Plus. 
+            Read what our patients have to say about their experience at Maa Super Speciality Hospital. 
             Their satisfaction is our greatest achievement.
           </p>
         </motion.div>
@@ -165,9 +165,9 @@ export function Testimonials() {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { value: '98%', label: 'Patient Satisfaction' },
-            { value: '50K+', label: 'Patients Treated' },
-            { value: '4.9', label: 'Average Rating' },
+            { value: '99.99%', label: 'Patient Satisfaction' },
+            { value: '01K+', label: 'Patients Treated' },
+            { value: '4.9/5.0', label: 'Average Ratings' },
             { value: '100%', label: 'Dedicated Staff' },
           ].map((stat, index) => (
             <motion.div
