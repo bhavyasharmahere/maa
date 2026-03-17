@@ -29,7 +29,7 @@ const doctors = [
     available: true,
     description: [
       'Gynecologist & laparoscopic surgery specialist.',
-      'Women’s health, pregnancy & infertility care.'
+      'Women’s health, pregnancy, infertility care and related issues.'
     ],
   },
 ];
