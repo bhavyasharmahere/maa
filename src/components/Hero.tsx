@@ -176,7 +176,7 @@ export function Hero() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-800">Top Trusted</div>
-                    <div className="text-sm text-gray-500">5Best Reviews</div>
+                    <div className="text-sm text-gray-500">Best Reviews</div>
                   </div>
                 </div>
               </motion.div>
