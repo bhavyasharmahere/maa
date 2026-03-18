@@ -9,7 +9,7 @@
 import React, { useState, useEffect } from "react";
 import "./DevProfile.css";
 
-/* ── inline SVG icons (zero dependencies) ──────────────────── */
+/* ── inline SVG icons (zero dependencies)  */
 const dpIcons = {
   github: React.createElement(
     "svg",
