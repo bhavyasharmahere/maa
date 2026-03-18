@@ -20,10 +20,10 @@ const doctors = [
     ],
   },
   {
-    name: 'Dr. Manisha Kumari',
+    name: 'Dr. Manisha',
     specialty: 'Gynecologist',
     experience: '10+ Years',
-    rating: 4.8,
+    rating: 10,
     image: hospImg,
     color: 'from-purple-400 to-indigo-500',
     available: true,

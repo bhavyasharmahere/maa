@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Profile</title>
+
+  <!-- Google Fonts (optional but recommended) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* base reset so nothing leaks */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+    }
+    #dp-mount {
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- React mount point -->
+  <div id="dp-mount"></div>
+
+  <!-- React 18 CDN (swap for your bundler if already present) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Load CSS -->
+  <link rel="stylesheet" href="./DevProfile.css" />
+
+  <!-- Load component via Babel in-browser (for standalone preview) -->
+  <script type="text/babel" src="./DevProfile.js"></script>
+
+  <script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById('dp-mount'));
+    root.render(React.createElement(DevProfile));
+  </script>
+
+</body>
+</html>

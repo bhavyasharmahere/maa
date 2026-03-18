@@ -1,0 +1,604 @@
+/* ═══════════════════════════════════════════════════════════
+   DevProfile.css  –  self-contained, all classes prefixed dp-
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── LIGHT theme tokens ────────────────────────────────────── */
+.dp-light {
+  --dp-bg1: #e8e0f0;
+  --dp-bg2: #d6eaf8;
+  --dp-card-bg: rgba(255, 255, 255, 0.72);
+  --dp-card-border: rgba(255, 255, 255, 0.85);
+  --dp-glow-a: #a78bfa;
+  --dp-glow-b: #f472b6;
+  --dp-glow-c: #38bdf8;
+  --dp-text: #1e293b;
+  --dp-text-muted: #64748b;
+  --dp-tag-bg: rgba(167, 139, 250, 0.14);
+  --dp-tag-text: #7c3aed;
+  --dp-link-bg: rgba(167, 139, 250, 0.10);
+  --dp-link-hover: rgba(167, 139, 250, 0.22);
+  --dp-shadow: 0 8px 40px rgba(100, 80, 160, 0.13);
+  --dp-dot: #22c55e;
+  --dp-toggle-bg: #c4b5fd;
+  --dp-toggle-thumb-bg: #ffffff;
+  --dp-blob-opacity: 0.35;
+  --dp-footer: #94a3b8;
+}
+
+/* ── DARK theme tokens ─────────────────────────────────────── */
+.dp-dark {
+  --dp-bg1: #0f0a1a;
+  --dp-bg2: #130d24;
+  --dp-card-bg: rgba(30, 20, 50, 0.78);
+  --dp-card-border: rgba(120, 80, 200, 0.25);
+  --dp-glow-a: #a78bfa;
+  --dp-glow-b: #ec4899;
+  --dp-glow-c: #06b6d4;
+  --dp-text: #f1f5f9;
+  --dp-text-muted: #94a3b8;
+  --dp-tag-bg: rgba(167, 139, 250, 0.18);
+  --dp-tag-text: #c4b5fd;
+  --dp-link-bg: rgba(167, 139, 250, 0.12);
+  --dp-link-hover: rgba(167, 139, 250, 0.28);
+  --dp-shadow: 0 8px 50px rgba(0, 0, 0, 0.45);
+  --dp-dot: #4ade80;
+  --dp-toggle-bg: #312e81;
+  --dp-toggle-thumb-bg: #1e1b4b;
+  --dp-blob-opacity: 0.18;
+  --dp-footer: #475569;
+}
+
+/* ── scoped reset ──────────────────────────────────────────── */
+.dp-root *,
+.dp-root *::before,
+.dp-root *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── page wrapper ──────────────────────────────────────────── */
+.dp-root {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, var(--dp-bg1), var(--dp-bg2));
+  transition: background 0.6s ease;
+  padding: 2rem 1rem;
+}
+
+/* ── floating gradient blobs ───────────────────────────────── */
+.dp-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dp-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: var(--dp-blob-opacity);
+  transition: opacity 0.6s;
+  will-change: transform;
+}
+
+.dp-blob-1 {
+  width: 420px; height: 420px;
+  background: var(--dp-glow-a);
+  top: -10%; left: -8%;
+  animation: dp-float1 18s ease-in-out infinite;
+}
+.dp-blob-2 {
+  width: 350px; height: 350px;
+  background: var(--dp-glow-b);
+  bottom: -12%; right: -6%;
+  animation: dp-float2 22s ease-in-out infinite;
+}
+.dp-blob-3 {
+  width: 280px; height: 280px;
+  background: var(--dp-glow-c);
+  top: 40%; left: 55%;
+  animation: dp-float3 20s ease-in-out infinite;
+}
+.dp-blob-4 {
+  width: 200px; height: 200px;
+  background: var(--dp-glow-a);
+  bottom: 25%; left: 15%;
+  animation: dp-float4 24s ease-in-out infinite;
+}
+.dp-blob-5 {
+  width: 180px; height: 180px;
+  background: var(--dp-glow-b);
+  top: 8%; right: 20%;
+  animation: dp-float1 26s ease-in-out infinite reverse;
+}
+.dp-blob-6 {
+  width: 150px; height: 150px;
+  background: var(--dp-glow-c);
+  top: 60%; left: 5%;
+  animation: dp-float2 19s ease-in-out infinite reverse;
+}
+
+@keyframes dp-float1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(60px, -40px) scale(1.12); }
+  66%      { transform: translate(-30px, 50px) scale(0.92); }
+}
+@keyframes dp-float2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(-50px, 30px) scale(0.9); }
+  66%      { transform: translate(40px, -60px) scale(1.15); }
+}
+@keyframes dp-float3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(70px, 40px) scale(1.1); }
+}
+@keyframes dp-float4 {
+  0%, 100% { transform: translate(0, 0); }
+  50%      { transform: translate(-40px, -50px); }
+}
+
+/* ── theme toggle button ───────────────────────────────────── */
+.dp-theme-btn {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dp-toggle-track {
+  display: flex;
+  align-items: center;
+  width: 56px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--dp-toggle-bg);
+  padding: 3px;
+  transition: background 0.4s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dp-toggle-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--dp-toggle-thumb-bg);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.35s;
+}
+
+.dp-dark .dp-toggle-thumb {
+  transform: translateX(26px);
+}
+
+.dp-ico-toggle {
+  width: 14px;
+  height: 14px;
+  color: var(--dp-glow-a);
+}
+
+.dp-theme-btn:hover .dp-toggle-track {
+  box-shadow: 0 0 18px rgba(167, 139, 250, 0.5);
+}
+
+/* ── main card ─────────────────────────────────────────────── */
+.dp-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--dp-shadow);
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  transition: box-shadow 0.4s;
+}
+
+.dp-enter .dp-card {
+  animation: dp-cardIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes dp-cardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* animated gradient glow border */
+.dp-card-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    var(--dp-glow-a),
+    var(--dp-glow-b),
+    var(--dp-glow-c),
+    var(--dp-glow-a)
+  );
+  background-size: 300% 300%;
+  animation: dp-glowShift 6s ease infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes dp-glowShift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+.dp-card-body {
+  position: relative;
+  z-index: 1;
+  background: var(--dp-card-bg);
+  backdrop-filter: blur(28px) saturate(1.6);
+  -webkit-backdrop-filter: blur(28px) saturate(1.6);
+  border-radius: inherit;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem 3.5rem;
+  transition: background 0.5s;
+}
+
+/* ── avatar section (left side) ────────────────────────────── */
+.dp-left {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dp-ring {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.dp-ring-spinner {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--dp-glow-a),
+    var(--dp-glow-b),
+    var(--dp-glow-c),
+    var(--dp-glow-a)
+  );
+  animation: dp-spin 4s linear infinite;
+  padding: 4px;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@keyframes dp-spin {
+  to { transform: rotate(360deg); }
+}
+
+.dp-avatar {
+  position: absolute;
+  inset: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  border-radius: 50%;
+  object-fit: cover;
+  animation: dp-avatarPop 0.7s 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes dp-avatarPop {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.dp-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--dp-text-muted);
+  background: var(--dp-tag-bg);
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  animation: dp-fadeUp 0.6s 0.5s both;
+}
+
+.dp-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dp-dot);
+  animation: dp-pulse 2s ease-in-out infinite;
+}
+
+@keyframes dp-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+  50%      { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+}
+
+/* ── info section (right side) ─────────────────────────────── */
+.dp-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.dp-name {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--dp-glow-a), var(--dp-glow-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: dp-fadeUp 0.6s 0.2s both;
+}
+
+.dp-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--dp-text-muted);
+  margin-top: 0.25rem;
+  animation: dp-fadeUp 0.6s 0.3s both;
+}
+
+.dp-bio {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--dp-text);
+  max-width: 480px;
+  animation: dp-fadeUp 0.6s 0.4s both;
+  transition: color 0.4s;
+}
+
+/* ── skill tags ────────────────────────────────────────────── */
+.dp-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.dp-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--dp-tag-text);
+  background: var(--dp-tag-bg);
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  animation: dp-tagIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.dp-tag:hover {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 4px 14px rgba(167, 139, 250, 0.3);
+}
+
+@keyframes dp-tagIn {
+  from { opacity: 0; transform: scale(0.6) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ── social link buttons ───────────────────────────────────── */
+.dp-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+
+.dp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--dp-text);
+  background: var(--dp-link-bg);
+  padding: 0.55rem 1.15rem;
+  border-radius: 14px;
+  border: 1.5px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: dp-linkIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  position: relative;
+  overflow: hidden;
+}
+
+.dp-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--dp-glow-a), var(--dp-glow-b));
+  opacity: 0;
+  transition: opacity 0.35s;
+  z-index: -1;
+}
+
+.dp-link:hover {
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(167, 139, 250, 0.35);
+}
+
+.dp-link:hover::before {
+  opacity: 1;
+}
+
+.dp-link:active {
+  transform: translateY(-1px) scale(1.01);
+}
+
+@keyframes dp-linkIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dp-ico {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.35s;
+}
+
+.dp-link:hover .dp-ico {
+  transform: rotate(-8deg) scale(1.18);
+}
+
+/* ── footer ────────────────────────────────────────────────── */
+.dp-footer {
+  margin-top: 2rem;
+  font-size: 0.78rem;
+  color: var(--dp-footer);
+  z-index: 1;
+  animation: dp-fadeUp 0.6s 1s both;
+  transition: color 0.4s;
+}
+
+.dp-heart {
+  display: inline-block;
+  color: var(--dp-glow-b);
+  animation: dp-heartBeat 1.2s ease-in-out infinite;
+}
+
+@keyframes dp-heartBeat {
+  0%, 100% { transform: scale(1); }
+  15%      { transform: scale(1.25); }
+  30%      { transform: scale(1); }
+  45%      { transform: scale(1.15); }
+  60%      { transform: scale(1); }
+}
+
+/* ── shared keyframe ───────────────────────────────────────── */
+@keyframes dp-fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE  BREAKPOINTS
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── LAPTOP  900 – 1199 px ─────────────────────────────────── */
+@media (max-width: 1199px) {
+  .dp-card-body {
+    padding: 2.5rem;
+    gap: 2.2rem;
+  }
+  .dp-ring {
+    width: 160px;
+    height: 160px;
+  }
+  .dp-name {
+    font-size: 1.7rem;
+  }
+}
+
+/* ── TABLET  600 – 899 px ──────────────────────────────────── */
+@media (max-width: 899px) {
+  .dp-card-body {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    gap: 1.5rem;
+  }
+  .dp-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dp-tags  { justify-content: center; }
+  .dp-links { justify-content: center; }
+  .dp-bio   { max-width: 400px; }
+  .dp-ring  { width: 170px; height: 170px; }
+}
+
+/* ── MOBILE  < 600 px ──────────────────────────────────────── */
+@media (max-width: 599px) {
+  .dp-root {
+    padding: 1rem 0.75rem;
+  }
+  .dp-card {
+    border-radius: 22px;
+  }
+  .dp-card-body {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.4rem;
+    gap: 1.2rem;
+  }
+  .dp-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dp-ring {
+    width: 140px;
+    height: 140px;
+  }
+  .dp-name  { font-size: 1.45rem; }
+  .dp-title { font-size: 0.95rem; }
+  .dp-bio   { font-size: 0.88rem; max-width: 100%; }
+  .dp-tags  { justify-content: center; }
+  .dp-tag   { font-size: 0.72rem; padding: 0.25rem 0.7rem; }
+
+  .dp-links {
+    flex-direction: column;
+    width: 100%;
+  }
+  .dp-link {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.92rem;
+    border-radius: 16px;
+  }
+
+  /* lighter animations on mobile */
+  .dp-blob          { filter: blur(100px); }
+  .dp-ring-spinner  { animation-duration: 6s; }
+  .dp-theme-btn     { top: 1rem; right: 1rem; }
+}
+
+/* ── accessibility: reduced motion ─────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .dp-root *,
+  .dp-root *::before,
+  .dp-root *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
