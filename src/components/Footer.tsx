@@ -20,7 +20,7 @@ const footerLinks = {
     { name: 'Gynecology', href: '#' },
   ],
   'Leagals': [
-    { name: 'Developers', href: '/developer/' },
+    { name: 'Developers', href: '/developers/' },
   ],
 };
 
