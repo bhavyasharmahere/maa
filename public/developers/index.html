@@ -4,48 +4,121 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Developer Profile</title>
-
-  <!-- Google Fonts (optional but recommended) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    /* base reset so nothing leaks */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow-x: hidden;
-    }
-    #dp-mount {
-      min-height: 100vh;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/DevProfile.css" />
 </head>
 <body>
 
-  <!-- React mount point -->
-  <div id="dp-mount"></div>
+<div id="dp-root" class="dp-root dp-light">
 
-  <!-- React 18 CDN (swap for your bundler if already present) -->
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- floating blobs -->
+  <div class="dp-bg" aria-hidden="true">
+    <span class="dp-blob dp-blob-1"></span>
+    <span class="dp-blob dp-blob-2"></span>
+    <span class="dp-blob dp-blob-3"></span>
+    <span class="dp-blob dp-blob-4"></span>
+    <span class="dp-blob dp-blob-5"></span>
+    <span class="dp-blob dp-blob-6"></span>
+  </div>
 
-  <!-- Load CSS -->
-  <link rel="stylesheet" href="./DevProfile.css" />
+  <!-- theme toggle -->
+  <button class="dp-theme-btn" id="dp-theme-btn" aria-label="Toggle theme">
+    <span class="dp-toggle-track">
+      <span class="dp-toggle-thumb">
+        <!-- moon (shown in light mode) -->
+        <svg class="dp-ico-toggle dp-ico-moon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.75 15.5a9.75 9.75 0 0 1-13.25-13.25A10 10 0 1 0 21.75 15.5Z"/>
+        </svg>
+        <!-- sun (shown in dark mode) -->
+        <svg class="dp-ico-toggle dp-ico-sun" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0-5a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0v-1a1 1 0 0 1 1-1ZM4.22 4.22a1 1 0 0 1 1.42 0l.7.7a1 1 0 0 1-1.41 1.42l-.71-.7a1 1 0 0 1 0-1.42Zm14.14 14.14a1 1 0 0 1 1.42 0l.7.7a1 1 0 0 1-1.41 1.42l-.71-.7a1 1 0 0 1 0-1.42ZM2 12a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1Zm18 0a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2h-1a1 1 0 0 1-1-1ZM5.64 17.36a1 1 0 0 1 0 1.42l-.7.7a1 1 0 0 1-1.42-1.41l.7-.71a1 1 0 0 1 1.42 0ZM19.78 4.22a1 1 0 0 1 0 1.42l-.7.7a1 1 0 0 1-1.42-1.41l.7-.71a1 1 0 0 1 1.42 0Z"/>
+        </svg>
+      </span>
+    </span>
+  </button>
 
-  <!-- Load component via Babel in-browser (for standalone preview) -->
-  <script type="text/babel" src="./DevProfile.js"></script>
+  <!-- card -->
+  <main class="dp-card">
+    <span class="dp-card-glow" aria-hidden="true"></span>
 
-  <script type="text/babel">
-    const root = ReactDOM.createRoot(document.getElementById('dp-mount'));
-    root.render(React.createElement(DevProfile));
-  </script>
+    <div class="dp-card-body">
 
+      <!-- LEFT: avatar -->
+      <section class="dp-left">
+        <div class="dp-ring">
+          <span class="dp-ring-spinner"></span>
+          <img
+            src="https://i.pravatar.cc/300?img=68"
+            alt="Alex Rivera"
+            class="dp-avatar"
+          />
+        </div>
+        <p class="dp-status">
+          <span class="dp-dot"></span>
+          Open to opportunities
+        </p>
+      </section>
+
+      <!-- RIGHT: info -->
+      <section class="dp-right">
+        <h1 class="dp-name">Alex Rivera</h1>
+        <p class="dp-title">Full-Stack Developer &amp; UI Architect</p>
+        <p class="dp-bio">
+          I craft performant, accessible interfaces and
+          scalable backend systems. Passionate about design
+          systems, developer tooling, and open-source.
+        </p>
+
+        <ul class="dp-tags">
+          <li class="dp-tag" style="animation-delay: 0s">React</li>
+          <li class="dp-tag" style="animation-delay: 0.07s">TypeScript</li>
+          <li class="dp-tag" style="animation-delay: 0.14s">Node.js</li>
+          <li class="dp-tag" style="animation-delay: 0.21s">Go</li>
+          <li class="dp-tag" style="animation-delay: 0.28s">Figma</li>
+          <li class="dp-tag" style="animation-delay: 0.35s">AWS</li>
+        </ul>
+
+        <nav class="dp-links" aria-label="Social links">
+
+          <a href="https://github.com/yourhandle" target="_blank" rel="noopener noreferrer" class="dp-link" style="animation-delay: 0.35s">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="dp-ico"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.16c-3.34.73-4.04-1.61-4.04-1.61a3.18 3.18 0 0 0-1.33-1.76c-1.09-.74.08-.73.08-.73a2.52 2.52 0 0 1 1.84 1.24 2.56 2.56 0 0 0 3.5 1 2.56 2.56 0 0 1 .76-1.6c-2.67-.3-5.47-1.33-5.47-5.93a4.64 4.64 0 0 1 1.24-3.22 4.3 4.3 0 0 1 .12-3.18s1-.32 3.3 1.23a11.38 11.38 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23a4.3 4.3 0 0 1 .12 3.18 4.64 4.64 0 0 1 1.23 3.22c0 4.61-2.81 5.63-5.48 5.92a2.86 2.86 0 0 1 .82 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3Z"/></svg>
+            <span>GitHub</span>
+          </a>
+
+          <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer" class="dp-link" style="animation-delay: 0.44s">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="dp-ico"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77A1.75 1.75 0 0 0 0 1.73v20.54A1.75 1.75 0 0 0 1.77 24h20.45A1.75 1.75 0 0 0 24 22.27V1.73A1.75 1.75 0 0 0 22.22 0Z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://x.com/yourhandle" target="_blank" rel="noopener noreferrer" class="dp-link" style="animation-delay: 0.53s">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="dp-ico"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.57-6.63 7.57H.49l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.48 3.24H4.3L17.61 20.65Z"/></svg>
+            <span>X / Twitter</span>
+          </a>
+
+          <a href="https://yoursite.dev" target="_blank" rel="noopener noreferrer" class="dp-link" style="animation-delay: 0.62s">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="dp-ico"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 6h-3.07a15.8 15.8 0 0 0-1.4-3.63A8.03 8.03 0 0 1 18.93 8ZM12 4.04c.82 1.1 1.47 2.32 1.91 3.96h-3.82A13.74 13.74 0 0 1 12 4.04ZM4.26 14a7.82 7.82 0 0 1 0-4h3.52a16.3 16.3 0 0 0 0 4H4.26Zm.81 2h3.07a15.8 15.8 0 0 0 1.4 3.63A8.03 8.03 0 0 1 5.07 16ZM8.14 8H5.07a8.03 8.03 0 0 1 3.47-3.63A15.8 15.8 0 0 0 8.14 8Zm3.86 11.96A13.74 13.74 0 0 1 10.09 16h3.82a13.74 13.74 0 0 1-1.91 3.96ZM14.34 14H9.66a14.36 14.36 0 0 1 0-4h4.68a14.36 14.36 0 0 1 0 4Zm.2 5.63A15.8 15.8 0 0 0 15.86 16h3.07a8.03 8.03 0 0 1-4.4 3.63ZM16.22 14a16.3 16.3 0 0 0 0-4h3.52a7.82 7.82 0 0 1 0 4h-3.52Z"/></svg>
+            <span>Portfolio</span>
+          </a>
+
+          <a href="mailto:you@example.com" target="_blank" rel="noopener noreferrer" class="dp-link" style="animation-delay: 0.71s">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="dp-ico"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.7-8 5.33L4 8.7V6.3l8 5.33 8-5.33v2.4Z"/></svg>
+            <span>Email</span>
+          </a>
+
+        </nav>
+      </section>
+
+    </div>
+  </main>
+
+  <p class="dp-footer">
+    Crafted with <span class="dp-heart">♥</span> &amp; vanilla JS
+  </p>
+
+</div>
+
+<script src="src/DevProfile.js"></script>
 </body>
 </html>

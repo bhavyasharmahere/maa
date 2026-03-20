@@ -1,13 +1,13 @@
 /* ═══════════════════════════════════════════════════════════
-   DevProfile.css  –  self-contained, all classes prefixed dp-
+   DevProfile.css  –  all classes prefixed dp-
+   won't collide with any existing styles
    ═══════════════════════════════════════════════════════════ */
 
-/* ── LIGHT theme tokens ────────────────────────────────────── */
+/* ── LIGHT tokens ──────────────────────────────────────────── */
 .dp-light {
   --dp-bg1: #e8e0f0;
   --dp-bg2: #d6eaf8;
   --dp-card-bg: rgba(255, 255, 255, 0.72);
-  --dp-card-border: rgba(255, 255, 255, 0.85);
   --dp-glow-a: #a78bfa;
   --dp-glow-b: #f472b6;
   --dp-glow-c: #38bdf8;
@@ -16,7 +16,6 @@
   --dp-tag-bg: rgba(167, 139, 250, 0.14);
   --dp-tag-text: #7c3aed;
   --dp-link-bg: rgba(167, 139, 250, 0.10);
-  --dp-link-hover: rgba(167, 139, 250, 0.22);
   --dp-shadow: 0 8px 40px rgba(100, 80, 160, 0.13);
   --dp-dot: #22c55e;
   --dp-toggle-bg: #c4b5fd;
@@ -25,12 +24,11 @@
   --dp-footer: #94a3b8;
 }
 
-/* ── DARK theme tokens ─────────────────────────────────────── */
+/* ── DARK tokens ───────────────────────────────────────────── */
 .dp-dark {
   --dp-bg1: #0f0a1a;
   --dp-bg2: #130d24;
   --dp-card-bg: rgba(30, 20, 50, 0.78);
-  --dp-card-border: rgba(120, 80, 200, 0.25);
   --dp-glow-a: #a78bfa;
   --dp-glow-b: #ec4899;
   --dp-glow-c: #06b6d4;
@@ -39,7 +37,6 @@
   --dp-tag-bg: rgba(167, 139, 250, 0.18);
   --dp-tag-text: #c4b5fd;
   --dp-link-bg: rgba(167, 139, 250, 0.12);
-  --dp-link-hover: rgba(167, 139, 250, 0.28);
   --dp-shadow: 0 8px 50px rgba(0, 0, 0, 0.45);
   --dp-dot: #4ade80;
   --dp-toggle-bg: #312e81;
@@ -47,6 +44,10 @@
   --dp-blob-opacity: 0.18;
   --dp-footer: #475569;
 }
+
+/* ── icon visibility per theme ─────────────────────────────── */
+.dp-light .dp-ico-sun  { display: none; }
+.dp-dark  .dp-ico-moon { display: none; }
 
 /* ── scoped reset ──────────────────────────────────────────── */
 .dp-root *,
@@ -72,7 +73,7 @@
   padding: 2rem 1rem;
 }
 
-/* ── floating gradient blobs ───────────────────────────────── */
+/* ── floating blobs ────────────────────────────────────────── */
 .dp-bg {
   position: fixed;
   inset: 0;
@@ -145,7 +146,7 @@
   50%      { transform: translate(-40px, -50px); }
 }
 
-/* ── theme toggle button ───────────────────────────────────── */
+/* ── theme toggle ──────────────────────────────────────────── */
 .dp-theme-btn {
   position: fixed;
   top: 1.5rem;
@@ -196,7 +197,7 @@
   box-shadow: 0 0 18px rgba(167, 139, 250, 0.5);
 }
 
-/* ── main card ─────────────────────────────────────────────── */
+/* ── card ──────────────────────────────────────────────────── */
 .dp-card {
   position: relative;
   z-index: 1;
@@ -215,13 +216,10 @@
 }
 
 @keyframes dp-cardIn {
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* animated gradient glow border */
+/* gradient glow border */
 .dp-card-glow {
   position: absolute;
   inset: 0;
@@ -264,7 +262,7 @@
   transition: background 0.5s;
 }
 
-/* ── avatar section (left side) ────────────────────────────── */
+/* ── avatar ────────────────────────────────────────────────── */
 .dp-left {
   flex-shrink: 0;
   display: flex;
@@ -332,6 +330,7 @@
 }
 
 .dp-dot {
+  display: inline-block;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -344,7 +343,7 @@
   50%      { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
 }
 
-/* ── info section (right side)  */
+/* ── info section ──────────────────────────────────────────── */
 .dp-right {
   flex: 1;
   min-width: 0;
@@ -379,7 +378,7 @@
   transition: color 0.4s;
 }
 
-/* ── skill tags  */
+/* ── tags ──────────────────────────────────────────────────── */
 .dp-tags {
   list-style: none;
   display: flex;
@@ -397,6 +396,7 @@
   border-radius: 999px;
   animation: dp-tagIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   transition: transform 0.25s, box-shadow 0.25s;
+  cursor: default;
 }
 
 .dp-tag:hover {
@@ -409,7 +409,7 @@
   to   { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-/* ── social link buttons  */
+/* ── links ─────────────────────────────────────────────────── */
 .dp-links {
   display: flex;
   flex-wrap: wrap;
@@ -477,7 +477,7 @@
   transform: rotate(-8deg) scale(1.18);
 }
 
-/* ── footer  */
+/* ── footer ────────────────────────────────────────────────── */
 .dp-footer {
   margin-top: 2rem;
   font-size: 0.78rem;
@@ -501,32 +501,23 @@
   60%      { transform: scale(1); }
 }
 
-/* ── shared keyframe  */
 @keyframes dp-fadeUp {
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* 
-   RESPONSIVE  BREAKPOINTS
-    */
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════ */
 
-/* ── LAPTOP  900 – 1199 px  */
+/* ── LAPTOP  900–1199 px ───────────────────────────────────── */
 @media (max-width: 1199px) {
-  .dp-card-body {
-    padding: 2.5rem;
-    gap: 2.2rem;
-  }
-  .dp-ring {
-    width: 160px;
-    height: 160px;
-  }
-  .dp-name {
-    font-size: 1.7rem;
-  }
+  .dp-card-body { padding: 2.5rem; gap: 2.2rem; }
+  .dp-ring      { width: 160px; height: 160px; }
+  .dp-name      { font-size: 1.7rem; }
 }
 
-/* ── TABLET  600 – 899 px ──────────────────────────────────── */
+/* ── TABLET  600–899 px ────────────────────────────────────── */
 @media (max-width: 899px) {
   .dp-card-body {
     flex-direction: column;
@@ -534,50 +525,39 @@
     padding: 2.5rem 2rem;
     gap: 1.5rem;
   }
-  .dp-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  .dp-right { display: flex; flex-direction: column; align-items: center; }
   .dp-tags  { justify-content: center; }
   .dp-links { justify-content: center; }
   .dp-bio   { max-width: 400px; }
   .dp-ring  { width: 170px; height: 170px; }
 }
 
-/* ── MOBILE  < 600 px ──────────────────────────────────────── */
+/* ── MOBILE  <600 px ───────────────────────────────────────── */
+*/
 @media (max-width: 599px) {
-  .dp-root {
-    padding: 1rem 0.75rem;
-  }
-  .dp-card {
-    border-radius: 22px;
-  }
+  .dp-root      { padding: 1rem 0.75rem; }
+  .dp-card      { border-radius: 22px; }
+
   .dp-card-body {
     flex-direction: column;
     text-align: center;
     padding: 2rem 1.4rem;
     gap: 1.2rem;
   }
-  .dp-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .dp-ring {
-    width: 140px;
-    height: 140px;
-  }
-  .dp-name  { font-size: 1.45rem; }
-  .dp-title { font-size: 0.95rem; }
-  .dp-bio   { font-size: 0.88rem; max-width: 100%; }
-  .dp-tags  { justify-content: center; }
-  .dp-tag   { font-size: 0.72rem; padding: 0.25rem 0.7rem; }
+
+  .dp-right     { display: flex; flex-direction: column; align-items: center; }
+  .dp-ring      { width: 140px; height: 140px; }
+  .dp-name      { font-size: 1.45rem; }
+  .dp-title     { font-size: 0.95rem; }
+  .dp-bio       { font-size: 0.88rem; max-width: 100%; }
+  .dp-tags      { justify-content: center; }
+  .dp-tag       { font-size: 0.72rem; padding: 0.25rem 0.7rem; }
 
   .dp-links {
     flex-direction: column;
     width: 100%;
   }
+
   .dp-link {
     width: 100%;
     justify-content: center;
@@ -586,13 +566,12 @@
     border-radius: 16px;
   }
 
-  /* lighter animations on mobile */
   .dp-blob          { filter: blur(100px); }
   .dp-ring-spinner  { animation-duration: 6s; }
   .dp-theme-btn     { top: 1rem; right: 1rem; }
 }
 
-/* ── accessibility: reduced motion ─────────────────────────── */
+/* ── reduced motion ────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .dp-root *,
   .dp-root *::before,
