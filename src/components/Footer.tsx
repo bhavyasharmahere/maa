@@ -20,7 +20,7 @@ const footerLinks = {
     { name: 'Gynecology', href: '#' },
   ],
   'Leagals': [
-    { name: 'Developers', href: '/developers/' },
+    { name: 'Dev </>', href: '/developers/' },
   ],
 };
 
@@ -88,7 +88,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-teal-400" />
-                <span>PG Road, Above SBI Bank, Horliganj, Jehanabad</span>
+                <span>2nd Floor, Above SBI Bank, PG Road, Horliganj, Jehanabad</span>
               </div>
             </div>
           </div>
