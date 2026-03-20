@@ -1,6 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
-   DevProfile.js  –  Pure JS React component (no TypeScript)
-   ═══════════════════════════════════════════════════════════ */
+/*  DevProfile.js  –  Pure JS React component (no TypeScript) */
 
 // If using a bundler (Vite / Webpack / CRA), uncomment these:
 // import React, { useState, useEffect } from "react";
