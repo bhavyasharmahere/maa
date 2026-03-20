@@ -533,7 +533,6 @@
 }
 
 /* ── MOBILE  <600 px ───────────────────────────────────────── */
-*/
 @media (max-width: 599px) {
   .dp-root      { padding: 1rem 0.75rem; }
   .dp-card      { border-radius: 22px; }
