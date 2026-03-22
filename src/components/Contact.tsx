@@ -121,38 +121,12 @@ export function Contact() {
                     {/* Google Map */}
                     <div className="absolute inset-0">
                       <iframe
-                      src="https://www.google.com/maps?q=25.214,84.987&z=15&output=embed"
+                      src="https://www.google.com/maps?q=25.207367957267888,84.98489552395854&z=15&output=embed"
                       className="w-full h-full border-0"
                       loading="lazy"
                       />
                       </div>
-                      
-                      <motion.div
-                      animate={{ y: [0, -10, 0] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      className="relative z-10"
-                      >
-                        <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center shadow-xl">
-                          📍
-                          </div>
-                      </motion.div>
-
                 </div>
-                {/* Location Marker */}
-                <motion.div
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="relative z-10"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center shadow-xl">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2">
-                    <div className="w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-teal-500 transform rotate-180 -mt-2" />
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
 
             {/* Social Links */}
             <motion.div
