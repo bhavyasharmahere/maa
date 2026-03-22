@@ -116,8 +116,6 @@ export function Contact() {
               className="bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl p-1"
             >
               <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center relative overflow-hidden">
-                {/* Animated Map Background */}
-                <div className="absolute inset-0">
                     {/* Google Map */}
                     <div className="absolute inset-0">
                       <iframe
@@ -125,8 +123,8 @@ export function Contact() {
                       className="w-full h-full border-0"
                       loading="lazy"
                       />
-                      </div>
-                </div>
+                    </div>
+              </div>
 
             {/* Social Links */}
             <motion.div
