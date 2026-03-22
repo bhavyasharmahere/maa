@@ -39,7 +39,7 @@ const socialLinks = [
 export function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [formState, setFormState] = useState({
+    const [formState, setFormState] = useState({
     name: '',
     email: '',
     phone: '',
@@ -48,11 +48,34 @@ export function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-  };
+const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const { name, email, phone, subject, message } = formState;
+
+  let text = `*New Enquiry*\n\n`;
+  text += `Name: ${name}\n`;
+
+  if (email) {
+    text += `Email: ${email}\n`;
+  }
+
+  text += `Phone: ${phone}\n`;
+  text += `Subject: ${subject}\n\n`;
+  text += `Message:\n${message}`;
+
+  const encodedText = encodeURIComponent(text);
+
+  const whatsappNumber = "919693846101"; //  PUT YOUR NUMBER HERE
+
+  const url = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+  window.open(url, "_blank");
+
+  // Optional success message
+  setSubmitted(true);
+  setTimeout(() => setSubmitted(false), 3000);
+};
 
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
@@ -161,6 +184,7 @@ export function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
               
               <div className="grid sm:grid-cols-2 gap-4 mb-4">
+                
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
                   <input
@@ -172,6 +196,7 @@ export function Contact() {
                     required
                   />
                 </div>
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                   <input
@@ -180,7 +205,6 @@ export function Contact() {
                     onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
                     placeholder="maasshosp@gmail.com"
-                    required
                   />
                 </div>
               </div>
@@ -194,8 +218,10 @@ export function Contact() {
                     onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
                     placeholder="+1 234 567 890"
+                    required
                   />
                 </div>
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
                   <select
@@ -220,7 +246,7 @@ export function Contact() {
                   onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                   rows={4}
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all resize-none"
-                  placeholder="!! FEATURE NOT WORKING!!"
+                  placeholder="!! FEATURE NOT WORKING !!"
                   required
                 />
               </div>
