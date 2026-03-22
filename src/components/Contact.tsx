@@ -230,11 +230,8 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
                     required
                   >
-                    <option value="">Select Subject</option>
                     <option value="appointment">Book Appointment</option>
                     <option value="inquiry">General Inquiry</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="emergency">Emergency</option>
                   </select>
                 </div>
               </div>
@@ -246,7 +243,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                   onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                   rows={4}
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all resize-none"
-                  placeholder="!! FEATURE NOT WORKING !!"
+                  placeholder="Describe your problem here..!"
                   required
                 />
               </div>
