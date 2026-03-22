@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: 'Working Hours',
-    details: ['(08:00AM to 10:00AM)',  '(1:00 PM to 3:00PM)', '(05:00PM to 07:00PM)', 'Emergency & Monitoring: 24/7'],
+    details: ['(08:00AM to 10:00AM)',  '(01:00 PM to 03:00PM)', '(05:00PM to 07:00PM)', 'Emergency & Monitoring: 24/7'],
   },
 ];
 
@@ -117,22 +117,26 @@ export function Contact() {
             >
               <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center relative overflow-hidden">
                 {/* Animated Map Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-teal-100">
-                  <motion.div
-                    className="absolute inset-0"
-                    style={{
-                      backgroundImage: `radial-gradient(circle at 20% 50%, rgba(20, 184, 166, 0.2) 0%, transparent 50%),
-                                        radial-gradient(circle at 80% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%)`,
-                    }}
-                    animate={{ opacity: [0.5, 0.8, 0.5] }}
-                    transition={{ duration: 4, repeat: Infinity }}
-                  />
-                  {/* Grid Lines */}
-                  <div className="absolute inset-0" style={{
-                    backgroundImage: `linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
-                                      linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)`,
-                    backgroundSize: '40px 40px',
-                  }} />
+                <div className="absolute inset-0">
+                    {/* Google Map */}
+                    <div className="absolute inset-0">
+                      <iframe
+                      src="https://www.google.com/maps?q=25.214,84.987&z=15&output=embed"
+                      className="w-full h-full border-0"
+                      loading="lazy"
+                      />
+                      </div>
+                      
+                      <motion.div
+                      animate={{ y: [0, -10, 0] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="relative z-10"
+                      >
+                        <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center shadow-xl">
+                          📍
+                          </div>
+                      </motion.div>
+
                 </div>
                 {/* Location Marker */}
                 <motion.div
