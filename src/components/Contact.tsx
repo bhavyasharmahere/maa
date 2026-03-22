@@ -66,7 +66,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
   const encodedText = encodeURIComponent(text);
 
-  const whatsappNumber = "919693846101"; //  PUT YOUR NUMBER HERE
+  const whatsappNumber = "919334408245"; //  PUT YOUR NUMBER HERE
 
   const url = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
 
