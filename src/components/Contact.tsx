@@ -125,6 +125,7 @@ export function Contact() {
                       />
                     </div>
               </div>
+            </motion.div>
 
             {/* Social Links */}
             <motion.div
