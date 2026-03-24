@@ -29,7 +29,7 @@ export default function BlurOverlay() {
           href="mailto:bhavthedev@proton.me"
           className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold shadow-md hover:scale-105 transition"
         >
-          Contact Dev <\>
+          Contact Dev
         </a>
       </motion.div>
     </motion.div>
