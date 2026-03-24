@@ -11,12 +11,12 @@ import EmergencyTab from "./components/EmergencyTab";
 import BlurOverlay from "./components/BlurOverlay";
 
 export function App() {
-  const isLive = true; //change when not to blur
+  const isLive = false; //change when not to blur
   return (
     <>
       {!isLive && <BlurOverlay />}
 
-      <div className={`min-h-screen scroll-mt-24 bg-white ${!isLive ? "blur-sm pointer-events-none" : ""}`}>
+      <div className={`min-h-screen bg-white ${!isLive ? "blur-sm pointer-events-none" : ""}`}>
       <Navbar />
       <main>
         <section id="home" className="min-h-screen scroll-mt-24">
@@ -46,5 +46,6 @@ export function App() {
       </section>
       <EmergencyTab />
     </div>
+    </>
   );
 }
