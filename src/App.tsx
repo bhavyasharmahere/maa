@@ -8,10 +8,15 @@ import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import EmergencyTab from "./components/EmergencyTab";
+import BlurOverlay from "./components/BlurOverlay";
 
 export function App() {
+  const isLive = false; //change when not to blur
   return (
-    <div className="min-h-screen scroll-mt-24 bg-white">
+    <>
+      {!isLive && <BlurOverlay />}
+
+      <div className={`min-h-screen scroll-mt-24 bg-white ${!isLive ? "blur-sm pointer-events-none" : ""}`}>
       <Navbar />
       <main>
         <section id="home" className="min-h-screen scroll-mt-24">
