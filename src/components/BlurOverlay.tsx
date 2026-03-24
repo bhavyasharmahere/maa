@@ -8,7 +8,7 @@ export default function BlurOverlay() {
       className="fixed inset-0 z-[9999] flex items-center justify-center"
     >
       {/* Background Blur */}
-      <div className="absolute inset-0 backdrop-blur-xl bg-white/30"></div>
+      <div className="absolute inset-0 backdrop-blur-2xl bg-white/40"></div>   
 
       {/* Content */}
       <motion.div

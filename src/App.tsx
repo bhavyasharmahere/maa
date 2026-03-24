@@ -16,7 +16,7 @@ export function App() {
     <>
       {!isLive && <BlurOverlay />}
 
-      <div className={`min-h-screen bg-white ${!isLive ? "blur-sm pointer-events-none" : ""}`}>
+      <div className={`min-h-screen bg-white ${!isLive ? "blur-2xl brightness-75 pointer-events-none" : ""}`}>
       <Navbar />
       <main>
         <section id="home" className="min-h-screen scroll-mt-24">
