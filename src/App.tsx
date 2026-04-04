@@ -11,7 +11,7 @@ import EmergencyTab from "./components/EmergencyTab";
 import BlurOverlay from "./components/BlurOverlay";
 
 export function App() {
-  const isLive = true; //change when not to blur
+  const isLive = false; //change when not to blur
   return (
     <>
       {!isLive && <BlurOverlay />}
